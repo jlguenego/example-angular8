@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "essai": {
+    "quizz": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/essai",
+            "outputPath": "dist/quizz",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -63,20 +63,20 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "essai:build",
+            "browserTarget": "quizz:build",
             "port": 4202,
             "host": "0.0.0.0"
           },
           "configurations": {
             "production": {
-              "browserTarget": "essai:build:production"
+              "browserTarget": "quizz:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "essai:build"
+            "browserTarget": "quizz:build"
           }
         },
         "test": {
@@ -113,15 +113,15 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "essai:serve"
+            "devServerTarget": "quizz:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "essai:serve:production"
+              "devServerTarget": "quizz:serve:production"
             }
           }
         }
       }
     }},
-  "defaultProject": "essai"
+  "defaultProject": "quizz"
 }

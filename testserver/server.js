@@ -8,7 +8,7 @@ app.use(function (req, res, next) {
     next();
 });
 
-const htdocs = '../essai/dist/essai';
+const htdocs = '../quizz/dist/quizz';
 app.use(express.static(htdocs));
 app.use(serveIndex(htdocs, {
     icons: true
