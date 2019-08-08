@@ -6,8 +6,9 @@
   align-items: center;
 }
 
+$side: 8em;
 button {
-  width: 8em;
-  height: 8em;
+  width: $side;
+  height: $side;
   margin: 0.5em;
 }
