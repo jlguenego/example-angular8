@@ -5,6 +5,14 @@
   background: #eee;
   padding-left: 0.5em;
 
+  a {
+    display: flex;
+    align-items: center;
+    span {
+      font-size: 1.3em;
+      font-weight: bold;
+    }
+  }
   img {
     position: relative;
     top: 0.1em;
