@@ -4,3 +4,22 @@
 * {
   box-sizing: border-box;
 }
+
+button {
+  border: 0.1em solid #eee;
+  background: #eee;
+
+  &:not(:disabled) {
+    cursor: pointer;
+    &:hover {
+      border-color: #ddd;
+      background: #ddd;
+    }
+
+    &:active {
+      border-color: #ccc;
+      background: #ccc;
+    }
+  }
+
+}
