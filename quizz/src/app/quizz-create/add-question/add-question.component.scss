@@ -1,0 +1,31 @@
+h1 {
+  text-align: center;
+}
+
+textarea {
+  width: 100%;
+}
+
+label {
+  display: block;
+  margin: 1em 0;
+}
+
+.answers {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.text-input {
+  display: flex;
+}
+
+.radio-inputs {
+  width: 3em;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+}
