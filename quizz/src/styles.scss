@@ -9,7 +9,8 @@ body {
   font-family: Arial, sans-serif
 }
 
-button, input {
+button,
+input {
   padding: 0.5em 1em;
   border: 0.1em solid #eee;
   margin: 0.5em 0;
@@ -20,6 +21,7 @@ button {
 
   &:not(:disabled) {
     cursor: pointer;
+
     &:hover {
       border-color: #ddd;
       background: #ddd;
@@ -29,6 +31,22 @@ button {
       border-color: #ccc;
       background: #ccc;
     }
+
+    &.primary {
+      color: white;
+      background: #333;
+      border-color: #333;
+
+      &:hover {
+        border-color: #444;
+        background: #444;
+      }
+
+      &:active {
+        border-color: #555;
+        background: #555;
+      }
+    }
   }
 
 }
@@ -36,6 +54,7 @@ button {
 a {
   text-decoration: none;
   color: inherit;
+
   &:hover {
     text-decoration: underline;
   }
