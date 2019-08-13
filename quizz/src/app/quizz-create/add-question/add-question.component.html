@@ -8,31 +8,13 @@
     <div class="label">Réponses possibles</div>
     <div class="answers">
       <div class="text-inputs">
-        <div class="text-input">
-          <span>A</span><input type="text">
-        </div>
-        <div class="text-input">
-          <span>B</span><input type="text">
-        </div>
-        <div class="text-input">
-          <span>C</span><input type="text">
-        </div>
-        <div class="text-input">
-          <span>D</span><input type="text">
+        <div class="text-input" *ngFor="let letter of ['A', 'B', 'C', 'D']">
+          <span>{{letter}}</span><input type="text">
         </div>
       </div>
       <div class="radio-inputs">
-        <div class="radio-input">
-          <input type="radio" value="A" name="x">
-        </div>
-        <div class="radio-input">
-          <input type="radio" value="B" name="x">
-        </div>
-        <div class="radio-input">
-          <input type="radio" value="C" name="x">
-        </div>
-        <div class="radio-input">
-          <input type="radio" value="D" name="x">
+        <div class="radio-input" *ngFor="let letter of ['A', 'B', 'C', 'D']">
+          <input type="radio" [value]="letter" name="correctAnswer">
         </div>
       </div>
     </div>
