@@ -1,1 +1,44 @@
-<p>add-question works!</p>
+<main>
+  <h1>Ajouter une question</h1>
+  <form>
+    <label>
+      <div>Libellé</div>
+      <textarea rows="3"></textarea>
+    </label>
+    <div class="label">Réponses possibles</div>
+    <div class="answers">
+      <div class="text-inputs">
+        <div class="text-input">
+          <span>A</span><input type="text">
+        </div>
+        <div class="text-input">
+          <span>B</span><input type="text">
+        </div>
+        <div class="text-input">
+          <span>C</span><input type="text">
+        </div>
+        <div class="text-input">
+          <span>D</span><input type="text">
+        </div>
+      </div>
+      <div class="radio-inputs">
+        <div class="radio-input">
+          <input type="radio" value="A" name="x">
+        </div>
+        <div class="radio-input">
+          <input type="radio" value="B" name="x">
+        </div>
+        <div class="radio-input">
+          <input type="radio" value="C" name="x">
+        </div>
+        <div class="radio-input">
+          <input type="radio" value="D" name="x">
+        </div>
+      </div>
+    </div>
+    <div class="buttons">
+      <button type="button" routerLink="/setup">Annuler</button>
+      <button type="button" routerLink="/setup" class="primary">Ajouter</button>
+    </div>
+  </form>
+</main>
