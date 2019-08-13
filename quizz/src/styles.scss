@@ -9,8 +9,13 @@ body {
   font-family: Arial, sans-serif
 }
 
-button {
+button, input {
+  padding: 0.5em 1em;
   border: 0.1em solid #eee;
+  margin: 0.5em 0;
+}
+
+button {
   background: #eee;
 
   &:not(:disabled) {
@@ -34,4 +39,14 @@ a {
   &:hover {
     text-decoration: underline;
   }
+}
+
+form {
+  display: flex;
+  flex-flow: column;
+}
+
+input {
+  display: block;
+  width: 100%;
 }
