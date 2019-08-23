@@ -29,6 +29,12 @@ label {
   width: 3em;
 }
 
+.radio-input {
+  display: flex;
+  align-items: center;
+  height: 3.3em;
+}
+
 .buttons {
   display: flex;
   justify-content: space-between;
