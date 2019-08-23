@@ -1,1 +1,13 @@
-<p>question works!</p>
+<h1>Les plus belles et magnifiques capitales d'europe</h1>
+<h2>Question 1 / 3</h2>
+<p>Quelle est la capitale de la France ?</p>
+<div class="answers">
+  <div class="answer" *ngFor="let letter of ['A', 'B', 'C', 'D']">
+    <input type="radio" name="answer" [value]="letter">
+    <span class="letter">{{letter}}</span>
+    <span>{{answer[letter]}}</span>
+  </div>
+</div>
+<div class="buttons">
+  <button class="primary" routerLink="/score">Suivant</button>
+</div>

@@ -1,0 +1,22 @@
+:host {
+  max-width: 30em;
+}
+
+h1 {
+  text-align: center;
+}
+
+input {
+  display: inline-block;
+  width: 3em;
+}
+
+.letter {
+  padding-right: 1em;
+}
+
+.buttons {
+  display: flex;
+  justify-content: flex-end;
+}
+

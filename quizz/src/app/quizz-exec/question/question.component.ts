@@ -7,6 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class QuestionComponent implements OnInit {
 
+  answer = {
+    A: 'Paris',
+    B: 'Londres',
+    C: 'Berlin',
+    D: 'Bucarest'
+  };
+
   constructor() { }
 
   ngOnInit() {
