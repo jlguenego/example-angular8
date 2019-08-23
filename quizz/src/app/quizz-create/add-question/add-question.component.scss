@@ -19,6 +19,10 @@ label {
 
 .text-input {
   display: flex;
+  align-items: center;
+  span {
+    padding-right: 1em;
+  }
 }
 
 .radio-inputs {
