@@ -6,6 +6,7 @@ import { LayoutModule } from './layout/layout.module';
 import { MainModule } from './main/main.module';
 import { QuizzCreateModule } from './quizz-create/quizz-create.module';
 import { QuizzExecModule } from './quizz-exec/quizz-exec.module';
+import { WidgetModule } from './widget/widget.module';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { QuizzExecModule } from './quizz-exec/quizz-exec.module';
     LayoutModule,
     MainModule,
     QuizzCreateModule,
-    QuizzExecModule
+    QuizzExecModule,
+    WidgetModule
   ],
   providers: [],
   bootstrap: [AppComponent]
