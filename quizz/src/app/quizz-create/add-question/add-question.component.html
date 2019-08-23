@@ -1,26 +1,26 @@
 <main>
   <h1>Ajouter une question</h1>
-  <form ngNoForm>
+  <form [formGroup]="f" (ngSubmit)="submit()">
     <label>
       <div>Libellé</div>
-      <textarea rows="3"></textarea>
+      <textarea rows="3" formControlName="label"></textarea>
     </label>
     <div class="label">Réponses possibles</div>
     <div class="answers">
       <div class="text-inputs">
         <div class="text-input" *ngFor="let letter of ['A', 'B', 'C', 'D']">
-          <span>{{letter}}</span><input type="text">
+          <span>{{letter}}</span><input type="text" [formControlName]="'answer' + letter">
         </div>
       </div>
       <div class="radio-inputs">
         <div class="radio-input" *ngFor="let letter of ['A', 'B', 'C', 'D']">
-          <input type="radio" [value]="letter" name="correctAnswer">
+          <input type="radio" [value]="letter" name="correctAnswer" formControlName="correctAnswer">
         </div>
       </div>
     </div>
     <div class="buttons">
       <button type="button" routerLink="/setup">Annuler</button>
-      <button type="button" routerLink="/setup" class="primary">Ajouter</button>
+      <button type="submit" class="primary" [disabled]="f.invalid">Ajouter</button>
     </div>
   </form>
 </main>
