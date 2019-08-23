@@ -1,0 +1,15 @@
+h1 {
+  text-align: center;
+}
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+$side: 8em;
+button {
+  width: $side;
+  height: $side;
+  margin: 0.5em;
+}
