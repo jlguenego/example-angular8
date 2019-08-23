@@ -1,8 +1,8 @@
 <main>
-  <h1>Quizz : <span>{{name}}</span></h1>
-  <p>Nombre de questions : {{nbr}}</p>
+  <h1>Quizz : <span>{{quizz.current.name}}</span></h1>
+  <p>Nombre de questions : {{quizz.current.questions.length}}</p>
   <div>
-    <button routerLink="/add-question">Ajouter une question</button>
+    <button autofocus routerLink="/add-question">Ajouter une question</button>
     <button routerLink="/finished" class="primary">Terminer</button>
   </div>
 </main>
