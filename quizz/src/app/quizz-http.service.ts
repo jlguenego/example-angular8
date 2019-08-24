@@ -20,4 +20,14 @@ export class QuizzHttpService extends QuizzService {
         this.saveQuizzStore();
       });
   }
+
+  httpPostQuizzStore() {
+    this.http.post<QuizzStore>('http://localhost:8000/ws/quizz', this.quizzStore)
+      .subscribe(qs => {});
+  }
+
+  saveCurrentToQuizzStore() {
+    super.saveCurrentToQuizzStore();
+    this.httpPostQuizzStore();
+  }
 }
