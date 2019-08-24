@@ -3,7 +3,6 @@
   <p>Nombre de questions : {{quizz.current.questions.length}}</p>
   <div>
     <button autofocus routerLink="/add-question">Ajouter une question</button>
-    <button *ngIf="quizz.current.questions.length > 0" routerLink="/finished" class="primary">Terminer</button>
+    <button *ngIf="quizz.current.questions.length > 0" (click)="finish()" class="primary">Terminer</button>
   </div>
 </main>
-
