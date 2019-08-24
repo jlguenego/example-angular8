@@ -67,4 +67,9 @@ export class QuizzService {
   isQuizzStoreEmpty() {
     return Object.keys(this.quizzStore).length === 0;
   }
+
+  getList(): Quizz[] {
+    return Object.values(this.quizzStore)
+      .sort((a, b) => a.name.toLowerCase() < b.name.toLowerCase() ? -1 : 1);
+  }
 }
