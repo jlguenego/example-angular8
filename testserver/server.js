@@ -12,7 +12,7 @@ app.use(function (req, res, next) {
     next();
 });
 
-const quizzStore = fs.readFileSync('./quizzStore.json', { encoding: 'utf8' });
+const quizzStore = JSON.parse(fs.readFileSync('./quizzStore.json', { encoding: 'utf8' }));
 console.log('quizzStore', quizzStore);
 app.get('/ws/quizz', (req, res, next) => {
     res.json(quizzStore);
