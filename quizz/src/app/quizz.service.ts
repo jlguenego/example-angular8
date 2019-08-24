@@ -63,4 +63,8 @@ export class QuizzService {
     this.quizzStore[this.current.name] = this.current;
     this.saveQuizzStore();
   }
+
+  isQuizzStoreEmpty() {
+    return Object.keys(this.quizzStore).length === 0;
+  }
 }
