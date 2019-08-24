@@ -18,7 +18,7 @@ export class QuizzService {
 
   current = this.getCurrent();
   quizzStore = this.getQuizzStore();
-  progress: QuizzProgress;
+  progress = this.getProgress();
 
   constructor() { }
 
@@ -95,5 +95,15 @@ export class QuizzService {
 
   saveProgress(p: QuizzProgress) {
     localStorage.setItem('progress', JSON.stringify(p));
+  }
+
+  getProgress(): QuizzProgress {
+    const str = localStorage.getItem('progress');
+    if (!str) {
+      return null;
+    }
+    const p = JSON.parse(str);
+    // no need to cast because it is an interface.
+    return p;
   }
 }

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { QuizzService } from 'src/app/quizz.service';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-question',
@@ -7,16 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class QuestionComponent implements OnInit {
 
-  answer = {
-    A: 'Paris',
-    B: 'Londres',
-    C: 'Berlin',
-    D: 'Bucarest'
-  };
+  f = new FormGroup({
+    answer: new FormControl('', Validators.required)
+  });
 
-  constructor() { }
+  constructor(public quizz: QuizzService) { }
 
   ngOnInit() {
+  }
+
+  submit() {
+    console.log('submit');
   }
 
 }
