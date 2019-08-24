@@ -14,7 +14,7 @@ export class QuizzHttpService extends QuizzService {
   }
 
   httpGetQuizzStore() {
-    this.http.get<QuizzStore>('http://localhost:8000/ws/quizz')
+    this.http.get<QuizzStore>('./ws/quizz')
       .subscribe(qs => {
         this.quizzStore = qs;
         this.saveQuizzStore();
@@ -22,7 +22,7 @@ export class QuizzHttpService extends QuizzService {
   }
 
   httpPostQuizzStore() {
-    this.http.post<QuizzStore>('http://localhost:8000/ws/quizz', this.quizzStore)
+    this.http.post<QuizzStore>('./ws/quizz', this.quizzStore)
       .subscribe(qs => {});
   }
 
