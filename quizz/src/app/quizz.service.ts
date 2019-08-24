@@ -89,12 +89,12 @@ export class QuizzService {
   }
 
   setProgress(p: QuizzProgress) {
-    this.saveProgress(p);
     this.progress = p;
+    this.saveProgress();
   }
 
-  saveProgress(p: QuizzProgress) {
-    localStorage.setItem('progress', JSON.stringify(p));
+  saveProgress() {
+    localStorage.setItem('progress', JSON.stringify(this.progress));
   }
 
   getProgress(): QuizzProgress {
