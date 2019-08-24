@@ -2,11 +2,11 @@ import { Injectable } from '@angular/core';
 import { Quizz } from './quizz';
 import { Question } from './question';
 
-interface QuizzStore {
+export interface QuizzStore {
   [key: string]: Quizz;
 }
 
-interface QuizzProgress {
+export interface QuizzProgress {
   score: number;
   questionId: number;
 }
