@@ -6,6 +6,11 @@ interface QuizzStore {
   [key: string]: Quizz;
 }
 
+interface QuizzProgress {
+  score: number;
+  questionId: number;
+}
+
 @Injectable({
   providedIn: 'root'
 })
@@ -13,6 +18,7 @@ export class QuizzService {
 
   current = this.getCurrent();
   quizzStore = this.getQuizzStore();
+  progress: QuizzProgress;
 
   constructor() { }
 
@@ -71,5 +77,23 @@ export class QuizzService {
   getList(): Quizz[] {
     return Object.values(this.quizzStore)
       .sort((a, b) => a.name.toLowerCase() < b.name.toLowerCase() ? -1 : 1);
+  }
+
+  start(q: Quizz) {
+    this.setCurrent(q);
+    this.setProgress({
+      score: 0,
+      questionId: 0
+    });
+
+  }
+
+  setProgress(p: QuizzProgress) {
+    this.saveProgress(p);
+    this.progress = p;
+  }
+
+  saveProgress(p: QuizzProgress) {
+    localStorage.setItem('progress', JSON.stringify(p));
   }
 }
