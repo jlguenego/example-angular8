@@ -12,4 +12,9 @@ export class ListPage {
     expect(isExisting).toBe(true);
   }
 
+  async clickOnQuizzButton(title: string) {
+    const button = element(by.xpath(`//button[text()="${title}"]`));
+    await button.click();
+  }
+
 }
