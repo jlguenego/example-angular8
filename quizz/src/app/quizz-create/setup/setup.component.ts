@@ -17,7 +17,7 @@ export class SetupComponent implements OnInit {
   finish() {
     console.log('finish');
     this.quizz.saveCurrentToQuizzStore();
-    this.router.navigate(['/']);
+    this.router.navigate(['/', 'finished']);
   }
 
 }
