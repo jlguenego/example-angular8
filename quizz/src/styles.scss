@@ -6,7 +6,15 @@
 }
 
 body {
-  font-family: Arial, sans-serif
+  font-family: Arial, sans-serif;
+  // allow to zoom to make font bigger.
+  @media screen and (max-width: 1024px) {
+    font-size: 1em;
+  }
+  // for a big screen, the font stays big.
+  @media screen and (min-width: 1024px) {
+    font-size: 2.5vh;
+  }
 }
 
 main {
