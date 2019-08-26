@@ -1,0 +1,11 @@
+div {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 0.8em;
+  // avoid gestalt proximity bug
+  padding-bottom: 1em;
+}
+
+.error {
+  color: red;
+}
