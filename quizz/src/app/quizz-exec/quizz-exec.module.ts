@@ -7,6 +7,7 @@ import { ListComponent } from './list/list.component';
 import { QuestionComponent } from './question/question.component';
 import { ScoreComponent } from './score/score.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { WidgetModule } from '../widget/widget.module';
 
 
 @NgModule({
@@ -15,6 +16,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     CommonModule,
     FontAwesomeModule,
     ReactiveFormsModule,
+    WidgetModule,
     QuizzExecRoutingModule
   ]
 })
