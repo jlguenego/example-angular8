@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import { QuizzCreateModule } from '../quizz-create.module';
 import { Quizz } from 'src/app/quizz';
 import { QuizzService } from 'src/app/quizz.service';
+import { CustomValidators } from 'src/app/widget/custom-validators';
 
 @Component({
   selector: 'app-create',
@@ -13,7 +14,7 @@ import { QuizzService } from 'src/app/quizz.service';
 export class CreateComponent implements OnInit {
 
   f = new FormGroup({
-    name: new FormControl('', Validators.required)
+    name: new FormControl('', [Validators.required, CustomValidators.maxLength(40)])
   });
 
   constructor(private router: Router, private quizz: QuizzService) { }
