@@ -20,7 +20,8 @@
       </div>
       <div class="radio-inputs">
         <div class="radio-input" *ngFor="let letter of ['A', 'B', 'C', 'D']">
-          <input type="radio" [value]="letter" name="correctAnswer" formControlName="correctAnswer">
+          <!-- <input type="radio" [value]="letter" name="correctAnswer" formControlName="correctAnswer"> -->
+          <app-radio-input type="radio" [returnedValue]="letter" name="correctAnswer" formControlName="correctAnswer"></app-radio-input>
         </div>
       </div>
     </div>
