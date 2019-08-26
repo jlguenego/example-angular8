@@ -20,8 +20,18 @@ label {
 .text-input {
   display: flex;
   align-items: center;
-  span {
+
+  span.letter {
     padding-right: 1em;
+  }
+
+  span.input {
+    position: relative;
+    app-show-max-length {
+      position: absolute;
+      right: 0.3em;
+      bottom: -1em;
+    }
   }
 }
 

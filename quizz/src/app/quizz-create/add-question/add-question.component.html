@@ -4,12 +4,18 @@
     <label>
       <div>Libellé</div>
       <textarea rows="3" formControlName="label"></textarea>
+      <app-show-max-length [fg]="f" fcn="label" [max]="200"></app-show-max-length>
     </label>
     <div class="label">Réponses possibles</div>
     <div class="answers">
       <div class="text-inputs">
         <div class="text-input" *ngFor="let letter of ['A', 'B', 'C', 'D']">
-          <span>{{letter}}</span><input type="text" [formControlName]="'answer' + letter">
+          <span class="letter">{{letter}}</span>
+          <span class="input">
+            <input type="text" [formControlName]="'answer' + letter">
+            <app-show-max-length [fg]="f" [fcn]="'answer' + letter" [max]="100"></app-show-max-length>
+          </span>
+
         </div>
       </div>
       <div class="radio-inputs">
