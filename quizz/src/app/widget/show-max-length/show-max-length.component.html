@@ -1,4 +1,5 @@
-<div [class.error]="fg.value[fcn].length > max">
+<div *ngIf="fg.value[fcn].length > 0.5 * max" [class.error]="fg.value[fcn].length > max">
+  <span *ngIf="fg.value[fcn].length > max">Texte trop long&nbsp;</span>
   <span>{{fg.value[fcn].length}}</span> /
   <span>{{max}}</span>
 </div>
