@@ -8,6 +8,9 @@ h1 {
 
 label {
   display: block;
+  &:hover {
+    background: hsl(0, 100%, 98%);
+  }
 }
 
 input {
