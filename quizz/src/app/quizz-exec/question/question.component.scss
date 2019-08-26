@@ -7,9 +7,13 @@ h1 {
 }
 
 label {
-  display: block;
+  display: flex;
+  align-items: center;
   &:hover {
     background: hsl(0, 100%, 98%);
+  }
+  app-radio-input {
+    width: 3em;
   }
 }
 
