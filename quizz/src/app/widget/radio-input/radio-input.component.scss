@@ -1,0 +1,9 @@
+$side: 2em;
+
+.circle {
+  display: inline-block;
+  border: 0.1em solid black;
+  border-radius: 100%;
+  width: $side;
+  height: $side;
+}
