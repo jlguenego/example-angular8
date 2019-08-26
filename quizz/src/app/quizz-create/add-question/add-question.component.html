@@ -9,14 +9,14 @@
     <div class="label">Réponses possibles</div>
     <div class="answers">
       <div class="text-inputs">
-        <div class="text-input" *ngFor="let letter of ['A', 'B', 'C', 'D']">
+        <label class="text-input" *ngFor="let letter of ['A', 'B', 'C', 'D']">
           <span class="letter">{{letter}}</span>
           <span class="input">
             <input type="text" [formControlName]="'answer' + letter">
             <app-show-max-length [fg]="f" [fcn]="'answer' + letter" [max]="100"></app-show-max-length>
           </span>
 
-        </div>
+        </label>
       </div>
       <div class="radio-inputs">
         <div class="radio-input" *ngFor="let letter of ['A', 'B', 'C', 'D']">
