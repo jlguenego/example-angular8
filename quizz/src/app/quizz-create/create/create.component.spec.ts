@@ -3,6 +3,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { CreateComponent } from './create.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { RouterTestingModule } from '@angular/router/testing';
+import { WidgetModule } from 'src/app/widget/widget.module';
 
 describe('CreateComponent', () => {
   let component: CreateComponent;
@@ -10,7 +11,7 @@ describe('CreateComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [ReactiveFormsModule, RouterTestingModule],
+      imports: [ReactiveFormsModule, RouterTestingModule, WidgetModule],
       declarations: [CreateComponent]
     })
       .compileComponents();
