@@ -22,7 +22,7 @@ export class AddQuestionPage {
 
   async selectCorrectAnswer(letter: string) {
     const num = letter.charCodeAt(0) - 'A'.charCodeAt(0);
-    const inputs = await element.all(by.css('.radio-inputs input'));
+    const inputs = await element.all(by.css('.radio-inputs .circle'));
     await inputs[num].click();
   }
 
