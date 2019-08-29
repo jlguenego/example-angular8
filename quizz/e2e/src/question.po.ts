@@ -3,7 +3,7 @@ import { browser, by, element } from 'protractor';
 export class QuestionPage {
 
   navigateTo() {
-    return browser.get(browser.baseUrl + 'list') as Promise<any>;
+    return browser.get(browser.baseUrl + 'question/34') as Promise<any>;
   }
 
   async clickOnAnswer(letter: string) {
