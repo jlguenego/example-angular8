@@ -1,23 +1,28 @@
-import { Component, OnInit, Input } from '@angular/core';
-import { AbstractValueAccessor, MakeProvider } from '../abstract-value-accessor';
+import { Component, OnInit, ElementRef, ContentChild, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'app-radio-input',
   templateUrl: './radio-input.component.html',
   styleUrls: ['./radio-input.component.scss'],
-  providers: [MakeProvider(RadioInputComponent)],
+  encapsulation: ViewEncapsulation.None,
 })
-export class RadioInputComponent extends AbstractValueAccessor implements OnInit {
-
-  @Input() returnedValue: string;
+export class RadioInputComponent implements OnInit {
 
   isSelected = false;
 
   constructor() {
-    super();
   }
 
   ngOnInit() {
+  }
+
+  click() {
+    console.log('click');
+    this.isSelected = true;
+  }
+
+  change() {
+    console.log('change');
   }
 
 }
