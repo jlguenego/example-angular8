@@ -1,11 +1,14 @@
 import { TestBed, async, inject } from '@angular/core/testing';
 
 import { MustHaveCurrentGuard } from './must-have-current.guard';
+import { RouterTestingModule } from '@angular/router/testing';
+import { QuizzService } from './quizz.service';
 
 describe('MustHaveCurrentGuard', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
-      providers: [MustHaveCurrentGuard]
+      imports: [RouterTestingModule],
+      providers: [MustHaveCurrentGuard, QuizzService]
     });
   });
 
