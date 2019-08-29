@@ -8,7 +8,7 @@ export class QuestionPage {
 
   async clickOnAnswer(letter: string) {
     const num = letter.charCodeAt(0) - 'A'.charCodeAt(0);
-    const inputs = await element.all(by.css('.answers input'));
+    const inputs = await element.all(by.css('.answers .circle'));
     console.log('inputs.length', inputs.length);
     const input = inputs[num];
     await input.click();
