@@ -3,7 +3,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { QuestionComponent } from './question.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { RouterTestingModule } from '@angular/router/testing';
-import { WidgetModule } from 'src/app/widget/widget.module';
+import { WidgetModule } from 'projects/widget/src/public-api';
 
 describe('QuestionComponent', () => {
   let component: QuestionComponent;
