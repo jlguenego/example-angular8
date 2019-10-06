@@ -8,7 +8,7 @@ import { FormGroup } from '@angular/forms';
 })
 export class ShowMaxLengthComponent implements OnInit {
 
-  @Input() fg: FormGroup;
+  @Input() fg = new FormGroup({});
   @Input() fcn: string;
   @Input() max: number;
 

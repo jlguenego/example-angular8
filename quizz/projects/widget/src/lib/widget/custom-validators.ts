@@ -1,5 +1,7 @@
 import { AbstractControl, ValidationErrors } from '@angular/forms';
 
+// for ng-packagr being able to compile lambda function in static methods.
+// @dynamic
 export class CustomValidators {
 
   static maxLength(max: number) {
