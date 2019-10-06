@@ -4,7 +4,7 @@ import { Router } from '@angular/router';
 import { QuizzCreateModule } from '../quizz-create.module';
 import { Quizz } from 'src/app/quizz';
 import { QuizzService } from 'src/app/quizz.service';
-import { CustomValidators } from 'src/app/widget/custom-validators';
+import { CustomValidators } from 'projects/widget/src/public-api';
 
 @Component({
   selector: 'app-create',

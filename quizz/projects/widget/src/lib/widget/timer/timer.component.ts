@@ -3,7 +3,7 @@ import { interval } from 'rxjs';
 import { take, startWith, scan } from 'rxjs/operators';
 
 @Component({
-  selector: 'app-timer',
+  selector: 'widget-timer',
   templateUrl: './timer.component.html',
   styleUrls: ['./timer.component.scss']
 })

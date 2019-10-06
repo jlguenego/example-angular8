@@ -2,7 +2,7 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { QuizzService } from 'src/app/quizz.service';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { TimerComponent } from 'src/app/widget/timer/timer.component';
+import { TimerComponent } from 'projects/widget/src/public-api';
 
 @Component({
   selector: 'app-question',

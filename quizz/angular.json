@@ -131,7 +131,7 @@
       "projectType": "library",
       "root": "projects/widget",
       "sourceRoot": "projects/widget/src",
-      "prefix": "lib",
+      "prefix": "widget",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-ng-packagr:build",

@@ -1,7 +1,7 @@
 import { Component, OnInit, ElementRef, ContentChild, ViewEncapsulation } from '@angular/core';
 
 @Component({
-  selector: 'app-radio-input',
+  selector: 'widget-radio-input',
   templateUrl: './radio-input.component.html',
   styleUrls: ['./radio-input.component.scss'],
   encapsulation: ViewEncapsulation.None,

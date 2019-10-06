@@ -1,14 +1,14 @@
 <main *ngIf="quizz.current">
-  <div class="timer"><app-timer [init]="10" (dringdring)="interrupt()"></app-timer></div>
+  <div class="timer"><widget-timer [init]="10" (dringdring)="interrupt()"></widget-timer></div>
   <h1>{{quizz.current.name}}</h1>
   <h2>Question {{quizz.progress.questionId + 1}} / {{quizz.current.questions.length}}</h2>
   <p>{{quizz.current.questions[quizz.progress.questionId].label}}</p>
   <form [formGroup]="f" (ngSubmit)="submit()">
     <div class="answers">
       <label class="answer" *ngFor="let letter of ['A', 'B', 'C', 'D']">
-        <app-radio-input>
+        <widget-radio-input>
           <input type="radio" name="answer" [value]="letter" formControlName="answer">
-        </app-radio-input>
+        </widget-radio-input>
         <span class="letter">{{letter}}</span>
         <span>{{quizz.current.questions[quizz.progress.questionId]['answer' + letter]}}</span>
       </label>

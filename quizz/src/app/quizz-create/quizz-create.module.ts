@@ -9,7 +9,7 @@ import { CreateComponent } from './create/create.component';
 import { SetupComponent } from './setup/setup.component';
 import { AddQuestionComponent } from './add-question/add-question.component';
 import { FinishedComponent } from './finished/finished.component';
-import { WidgetModule } from '../widget/widget.module';
+import { WidgetModule } from 'projects/widget/src/public-api';
 
 
 @NgModule({

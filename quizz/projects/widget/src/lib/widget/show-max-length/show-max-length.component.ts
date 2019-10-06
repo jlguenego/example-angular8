@@ -2,7 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import { FormGroup } from '@angular/forms';
 
 @Component({
-  selector: 'app-show-max-length',
+  selector: 'widget-show-max-length',
   templateUrl: './show-max-length.component.html',
   styleUrls: ['./show-max-length.component.scss']
 })

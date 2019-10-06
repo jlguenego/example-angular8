@@ -7,7 +7,7 @@ import { ListComponent } from './list/list.component';
 import { QuestionComponent } from './question/question.component';
 import { ScoreComponent } from './score/score.component';
 import { ReactiveFormsModule } from '@angular/forms';
-import { WidgetModule } from '../widget/widget.module';
+import { WidgetModule } from 'projects/widget/src/public-api';
 
 
 @NgModule({

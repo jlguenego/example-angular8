@@ -4,7 +4,7 @@
       <label>
         <div>Libellé</div>
         <textarea rows="3" formControlName="label"></textarea>
-        <app-show-max-length [fg]="f" fcn="label" [max]="200"></app-show-max-length>
+        <widget-show-max-length [fg]="f" fcn="label" [max]="200"></widget-show-max-length>
       </label>
       <div class="label">Réponses possibles</div>
       <div class="answers">
@@ -13,16 +13,16 @@
             <span class="letter">{{letter}}</span>
             <span class="input">
               <input type="text" [formControlName]="'answer' + letter">
-              <app-show-max-length [fg]="f" [fcn]="'answer' + letter" [max]="100"></app-show-max-length>
+              <widget-show-max-length [fg]="f" [fcn]="'answer' + letter" [max]="100"></widget-show-max-length>
             </span>
 
           </label>
         </div>
         <div class="radio-inputs">
           <div class="radio-input" *ngFor="let letter of ['A', 'B', 'C', 'D']">
-            <app-radio-input>
+            <widget-radio-input>
               <input type="radio" name="correctAnswer" [value]="letter" formControlName="correctAnswer">
-            </app-radio-input>
+            </widget-radio-input>
           </div>
         </div>
       </div>

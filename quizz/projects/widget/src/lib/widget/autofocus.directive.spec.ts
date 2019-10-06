@@ -6,7 +6,7 @@ import { By } from '@angular/platform-browser';
 @Component({
   template: `
   <div class="toto"></div>
-  <input appAutofocus (focus)="focus()">`
+  <input widgetAutofocus (focus)="focus()">`
 })
 class TestComponent implements OnInit {
   isFocused = false;
