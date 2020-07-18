@@ -19,11 +19,11 @@
           </label>
         </div>
         <div class="radio-inputs">
-          <div class="radio-input" *ngFor="let letter of ['A', 'B', 'C', 'D']">
+          <label class="radio-input" *ngFor="let letter of ['A', 'B', 'C', 'D']">
             <widget-radio-input>
               <input type="radio" name="correctAnswer" [value]="letter" formControlName="correctAnswer">
             </widget-radio-input>
-          </div>
+          </label>
         </div>
       </div>
     <div class="buttons">
