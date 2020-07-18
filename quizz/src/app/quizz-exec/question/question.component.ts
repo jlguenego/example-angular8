@@ -11,7 +11,7 @@ import { TimerComponent } from 'projects/widget/src/public-api';
 })
 export class QuestionComponent implements OnInit {
 
-  @ViewChild(TimerComponent, { static: false }) timer: TimerComponent;
+  @ViewChild(TimerComponent) timer: TimerComponent;
 
   f = new FormGroup({
     answer: new FormControl('', Validators.required)
